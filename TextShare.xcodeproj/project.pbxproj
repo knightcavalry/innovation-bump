@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE44131F1704810C002718DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44131E1704810C002718DE /* UIKit.framework */; };
+		CE4413211704810C002718DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4413201704810C002718DE /* Foundation.framework */; };
+		CE4413231704810C002718DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4413221704810C002718DE /* CoreGraphics.framework */; };
+		CE4413291704810C002718DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4413271704810C002718DE /* InfoPlist.strings */; };
+		CE44132B1704810C002718DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44132A1704810C002718DE /* main.m */; };
+		CE44132F1704810C002718DE /* textshareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44132E1704810C002718DE /* textshareAppDelegate.m */; };
+		CE4413311704810C002718DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4413301704810C002718DE /* Default.png */; };
+		CE4413331704810C002718DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4413321704810C002718DE /* Default@2x.png */; };
+		CE4413351704810C002718DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4413341704810C002718DE /* Default-568h@2x.png */; };
+		CE44133E1704810C002718DE /* textshareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44133D1704810C002718DE /* textshareViewController.m */; };
+		CE4413461704810C002718DE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4413451704810C002718DE /* SenTestingKit.framework */; };
+		CE4413471704810C002718DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44131E1704810C002718DE /* UIKit.framework */; };
+		CE4413481704810C002718DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4413201704810C002718DE /* Foundation.framework */; };
+		CE4413501704810C002718DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE44134E1704810C002718DE /* InfoPlist.strings */; };
+		CE4413531704810C002718DE /* TextShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4413521704810C002718DE /* TextShareTests.m */; };
+		CE44135F17049844002718DE /* textShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE44135E17049844002718DE /* textShareView.xib */; };
+		CE44136317049C32002718DE /* libBump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44136217049C32002718DE /* libBump.a */; };
+		CE44136517049D2B002718DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44136417049D2B002718DE /* AudioToolbox.framework */; };
+		CE44136717049D36002718DE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44136617049D36002718DE /* CFNetwork.framework */; };
+		CE44136917049D56002718DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE44136817049D56002718DE /* CoreLocation.framework */; };
+		CE44136C1704C9C0002718DE /* textshareBumpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44136B1704C9C0002718DE /* textshareBumpController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE4413491704810C002718DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4413131704810C002718DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE44131A1704810C002718DE;
+			remoteInfo = TextShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE44131B1704810C002718DE /* TextShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE44131E1704810C002718DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE4413201704810C002718DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE4413221704810C002718DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE4413261704810C002718DE /* TextShare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextShare-Info.plist"; sourceTree = "<group>"; };
+		CE4413281704810C002718DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE44132A1704810C002718DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE44132C1704810C002718DE /* TextShare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextShare-Prefix.pch"; sourceTree = "<group>"; };
+		CE44132D1704810C002718DE /* textshareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = textshareAppDelegate.h; sourceTree = "<group>"; };
+		CE44132E1704810C002718DE /* textshareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = textshareAppDelegate.m; sourceTree = "<group>"; };
+		CE4413301704810C002718DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CE4413321704810C002718DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CE4413341704810C002718DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE44133C1704810C002718DE /* textshareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = textshareViewController.h; sourceTree = "<group>"; };
+		CE44133D1704810C002718DE /* textshareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = textshareViewController.m; sourceTree = "<group>"; };
+		CE4413441704810C002718DE /* TextShareTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextShareTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4413451704810C002718DE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE44134D1704810C002718DE /* TextShareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextShareTests-Info.plist"; sourceTree = "<group>"; };
+		CE44134F1704810C002718DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE4413511704810C002718DE /* TextShareTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextShareTests.h; sourceTree = "<group>"; };
+		CE4413521704810C002718DE /* TextShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextShareTests.m; sourceTree = "<group>"; };
+		CE44135E17049844002718DE /* textShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = textShareView.xib; path = ../textShareView.xib; sourceTree = "<group>"; };
+		CE44136117049C32002718DE /* BumpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BumpClient.h; sourceTree = "<group>"; };
+		CE44136217049C32002718DE /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
+		CE44136417049D2B002718DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CE44136617049D36002718DE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CE44136817049D56002718DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE44136A1704C9C0002718DE /* textshareBumpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textshareBumpController.h; sourceTree = "<group>"; };
+		CE44136B1704C9C0002718DE /* textshareBumpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textshareBumpController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE4413181704810C002718DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE44136917049D56002718DE /* CoreLocation.framework in Frameworks */,
+				CE44136717049D36002718DE /* CFNetwork.framework in Frameworks */,
+				CE44136517049D2B002718DE /* AudioToolbox.framework in Frameworks */,
+				CE44131F1704810C002718DE /* UIKit.framework in Frameworks */,
+				CE4413211704810C002718DE /* Foundation.framework in Frameworks */,
+				CE4413231704810C002718DE /* CoreGraphics.framework in Frameworks */,
+				CE44136317049C32002718DE /* libBump.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4413401704810C002718DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4413461704810C002718DE /* SenTestingKit.framework in Frameworks */,
+				CE4413471704810C002718DE /* UIKit.framework in Frameworks */,
+				CE4413481704810C002718DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE4413121704810C002718DE = {
+			isa = PBXGroup;
+			children = (
+				CE44136817049D56002718DE /* CoreLocation.framework */,
+				CE44136617049D36002718DE /* CFNetwork.framework */,
+				CE44136417049D2B002718DE /* AudioToolbox.framework */,
+				CE44136017049BFB002718DE /* Library */,
+				CE4413241704810C002718DE /* TextShare */,
+				CE44134B1704810C002718DE /* TextShareTests */,
+				CE44131D1704810C002718DE /* Frameworks */,
+				CE44131C1704810C002718DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE44131C1704810C002718DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE44131B1704810C002718DE /* TextShare.app */,
+				CE4413441704810C002718DE /* TextShareTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE44131D1704810C002718DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE44131E1704810C002718DE /* UIKit.framework */,
+				CE4413201704810C002718DE /* Foundation.framework */,
+				CE4413221704810C002718DE /* CoreGraphics.framework */,
+				CE4413451704810C002718DE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4413241704810C002718DE /* TextShare */ = {
+			isa = PBXGroup;
+			children = (
+				CE44136A1704C9C0002718DE /* textshareBumpController.h */,
+				CE44136B1704C9C0002718DE /* textshareBumpController.m */,
+				CE44132D1704810C002718DE /* textshareAppDelegate.h */,
+				CE44132E1704810C002718DE /* textshareAppDelegate.m */,
+				CE44133C1704810C002718DE /* textshareViewController.h */,
+				CE44133D1704810C002718DE /* textshareViewController.m */,
+				CE4413251704810C002718DE /* Supporting Files */,
+			);
+			path = TextShare;
+			sourceTree = "<group>";
+		};
+		CE4413251704810C002718DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE44135E17049844002718DE /* textShareView.xib */,
+				CE4413261704810C002718DE /* TextShare-Info.plist */,
+				CE4413271704810C002718DE /* InfoPlist.strings */,
+				CE44132A1704810C002718DE /* main.m */,
+				CE44132C1704810C002718DE /* TextShare-Prefix.pch */,
+				CE4413301704810C002718DE /* Default.png */,
+				CE4413321704810C002718DE /* Default@2x.png */,
+				CE4413341704810C002718DE /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE44134B1704810C002718DE /* TextShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE4413511704810C002718DE /* TextShareTests.h */,
+				CE4413521704810C002718DE /* TextShareTests.m */,
+				CE44134C1704810C002718DE /* Supporting Files */,
+			);
+			path = TextShareTests;
+			sourceTree = "<group>";
+		};
+		CE44134C1704810C002718DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE44134D1704810C002718DE /* TextShareTests-Info.plist */,
+				CE44134E1704810C002718DE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE44136017049BFB002718DE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CE44136117049C32002718DE /* BumpClient.h */,
+				CE44136217049C32002718DE /* libBump.a */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE44131A1704810C002718DE /* TextShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4413561704810C002718DE /* Build configuration list for PBXNativeTarget "TextShare" */;
+			buildPhases = (
+				CE4413171704810C002718DE /* Sources */,
+				CE4413181704810C002718DE /* Frameworks */,
+				CE4413191704810C002718DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextShare;
+			productName = TextShare;
+			productReference = CE44131B1704810C002718DE /* TextShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE4413431704810C002718DE /* TextShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4413591704810C002718DE /* Build configuration list for PBXNativeTarget "TextShareTests" */;
+			buildPhases = (
+				CE44133F1704810C002718DE /* Sources */,
+				CE4413401704810C002718DE /* Frameworks */,
+				CE4413411704810C002718DE /* Resources */,
+				CE4413421704810C002718DE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE44134A1704810C002718DE /* PBXTargetDependency */,
+			);
+			name = TextShareTests;
+			productName = TextShareTests;
+			productReference = CE4413441704810C002718DE /* TextShareTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE4413131704810C002718DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = textshare;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Fauzan, Muhammad - CW";
+			};
+			buildConfigurationList = CE4413161704810C002718DE /* Build configuration list for PBXProject "TextShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE4413121704810C002718DE;
+			productRefGroup = CE44131C1704810C002718DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE44131A1704810C002718DE /* TextShare */,
+				CE4413431704810C002718DE /* TextShareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE4413191704810C002718DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4413291704810C002718DE /* InfoPlist.strings in Resources */,
+				CE4413311704810C002718DE /* Default.png in Resources */,
+				CE4413331704810C002718DE /* Default@2x.png in Resources */,
+				CE4413351704810C002718DE /* Default-568h@2x.png in Resources */,
+				CE44135F17049844002718DE /* textShareView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4413411704810C002718DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4413501704810C002718DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE4413421704810C002718DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE4413171704810C002718DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE44132B1704810C002718DE /* main.m in Sources */,
+				CE44132F1704810C002718DE /* textshareAppDelegate.m in Sources */,
+				CE44133E1704810C002718DE /* textshareViewController.m in Sources */,
+				CE44136C1704C9C0002718DE /* textshareBumpController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE44133F1704810C002718DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4413531704810C002718DE /* TextShareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE44134A1704810C002718DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE44131A1704810C002718DE /* TextShare */;
+			targetProxy = CE4413491704810C002718DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE4413271704810C002718DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4413281704810C002718DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE44134E1704810C002718DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE44134F1704810C002718DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE4413541704810C002718DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE4413551704810C002718DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE4413571704810C002718DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Best Buy Co., Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Best Buy Co., Inc.";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextShare/TextShare-Prefix.pch";
+				INFOPLIST_FILE = "TextShare/TextShare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "41B4C697-198D-4079-A622-EFE7129E0572";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41B4C697-198D-4079-A622-EFE7129E0572";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 arm7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE4413581704810C002718DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Best Buy Co., Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Best Buy Co., Inc.";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextShare/TextShare-Prefix.pch";
+				INFOPLIST_FILE = "TextShare/TextShare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "41B4C697-198D-4079-A622-EFE7129E0572";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41B4C697-198D-4079-A622-EFE7129E0572";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 arm7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CE44135A1704810C002718DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShare.app/TextShare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextShare/TextShare-Prefix.pch";
+				INFOPLIST_FILE = "TextShareTests/TextShareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CE44135B1704810C002718DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShare.app/TextShare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextShare/TextShare-Prefix.pch";
+				INFOPLIST_FILE = "TextShareTests/TextShareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4413161704810C002718DE /* Build configuration list for PBXProject "TextShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4413541704810C002718DE /* Debug */,
+				CE4413551704810C002718DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4413561704810C002718DE /* Build configuration list for PBXNativeTarget "TextShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4413571704810C002718DE /* Debug */,
+				CE4413581704810C002718DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE4413591704810C002718DE /* Build configuration list for PBXNativeTarget "TextShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE44135A1704810C002718DE /* Debug */,
+				CE44135B1704810C002718DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE4413131704810C002718DE /* Project object */;
+}
