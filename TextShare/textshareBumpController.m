@@ -7,17 +7,18 @@
 //
 
 #import "textshareBumpController.h"
+#import "textshareViewController.h"
 #import "BumpClient.h"
 
 @implementation textshareBumpController
 
 
-- (void)sendBump{
-
++ (void)simulateBump{
+    BumpClient *client = [BumpClient sharedClient];
+    [client simulateBump];
 }
 
-
-+ (void) configureBump {
++ (void) configureBump:(textshareViewController *)viewController{
     [BumpClient configureWithAPIKey:@"5cedbb5f68114748a1e35686c03cecc3" andUserID:[[UIDevice currentDevice] name]];
     
     [[BumpClient sharedClient] setMatchBlock:^(BumpChannelID channel) {
@@ -27,13 +28,14 @@
     
     [[BumpClient sharedClient] setChannelConfirmedBlock:^(BumpChannelID channel) {
         NSLog(@"Channel with %@ confirmed.", [[BumpClient sharedClient] userIDForChannel:channel]);
-        [[BumpClient sharedClient] sendData:[[NSString stringWithFormat:@"Nihao"] dataUsingEncoding:NSUTF8StringEncoding]
+        [[BumpClient sharedClient] sendData:[[viewController getYourThoughts] dataUsingEncoding:NSUTF8StringEncoding]
                                   toChannel:channel];
     }];
     
     [[BumpClient sharedClient] setDataReceivedBlock:^(BumpChannelID channel, NSData *data) {
         NSLog(@"Data received from %@: %@", [[BumpClient sharedClient] userIDForChannel:channel], [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
         NSString * message = [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding];
+        [viewController setFriendMessage:message];
     }];
     
     [[BumpClient sharedClient] setConnectionStateChangedBlock:^(BOOL connected) {

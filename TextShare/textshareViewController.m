@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [bumpButton addTarget:self action:@selector(onBumpButtonClick:) forControlEvents:(UIControlEvents)UIControlEventTouchDown];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,7 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [textshareBumpController configureBump];
+    [textshareBumpController configureBump:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -59,6 +60,13 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+}
+
+
+//Handler for onclick button
+
+- (void)onBumpButtonClick:(id)sender{
+    [textshareBumpController simulateBump];
 }
 
 @end

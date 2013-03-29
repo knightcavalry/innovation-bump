@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "textshareViewController.h"
 
 @interface textshareBumpController : NSObject
 
-+ (void) configureBump;
++ (void) configureBump:(textshareViewController *)viewController;
++ (void) simulateBump;
 
 @end

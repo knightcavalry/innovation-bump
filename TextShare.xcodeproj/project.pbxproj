@@ -103,9 +103,6 @@
 		CE4413121704810C002718DE = {
 			isa = PBXGroup;
 			children = (
-				CE44136817049D56002718DE /* CoreLocation.framework */,
-				CE44136617049D36002718DE /* CFNetwork.framework */,
-				CE44136417049D2B002718DE /* AudioToolbox.framework */,
 				CE44136017049BFB002718DE /* Library */,
 				CE4413241704810C002718DE /* TextShare */,
 				CE44134B1704810C002718DE /* TextShareTests */,
@@ -126,6 +123,9 @@
 		CE44131D1704810C002718DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE44136817049D56002718DE /* CoreLocation.framework */,
+				CE44136617049D36002718DE /* CFNetwork.framework */,
+				CE44136417049D2B002718DE /* AudioToolbox.framework */,
 				CE44131E1704810C002718DE /* UIKit.framework */,
 				CE4413201704810C002718DE /* Foundation.framework */,
 				CE4413221704810C002718DE /* CoreGraphics.framework */,
@@ -504,6 +504,7 @@
 				CE4413581704810C002718DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE4413591704810C002718DE /* Build configuration list for PBXNativeTarget "TextShareTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +513,7 @@
 				CE44135B1704810C002718DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
