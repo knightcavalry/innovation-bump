@@ -19,6 +19,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [bumpButton addTarget:self action:@selector(onBumpButtonClick:) forControlEvents:(UIControlEvents)UIControlEventTouchDown];
+    [bumpTimerButton addTarget:self action:@selector(onTimedBumpButtonClick:) forControlEvents:(UIControlEvents)UIControlEventTouchDown];
+    //set to NO to enable bump with timer button
+    bumpTimerButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +47,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [textshareBumpController configureBump:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -63,10 +65,37 @@
 }
 
 
+//Handle for active/inactive bump button
+- (void)setButtonStatus:(BOOL)isactive{
+    [bumpButton setEnabled:isactive];
+}
+
 //Handler for onclick button
 
 - (void)onBumpButtonClick:(id)sender{
-    [textshareBumpController simulateBump];
+    [self startBumping];
 }
+
+//Handle timer bump
+- (void)onTimedBumpButtonClick:(id)sender{
+    NSNumber*currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
+    //get next 5 seconds timestamp
+    long temp1 = [currentTime longValue]/10;
+    long temp2 = temp1 * 10 + 10;
+    NSLog(@"Current time : %ld",[currentTime longValue]);
+    NSLog(@"Balance time : %ld",temp2);
+    UILocalNotification * localNotif = [[UILocalNotification alloc]init];
+    NSDate * nextDate = [NSDate dateWithTimeIntervalSince1970:temp2];
+    localNotif.fireDate = nextDate;
+    localNotif.alertAction = @"BUMP!";
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    localNotif = NULL;
+}
+
+- (void) startBumping{
+    [textshareBumpController simulateBump];
+    NSLog(@"Bump at %f", [NSDate timeIntervalSinceReferenceDate]);
+}
+
 
 @end

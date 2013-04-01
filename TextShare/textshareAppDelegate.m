@@ -8,6 +8,7 @@
 
 #import "textshareAppDelegate.h"
 #import "textshareViewController.h"
+#import "textshareBumpController.h"
 #import "BumpClient.h"
 @implementation textshareAppDelegate
 
@@ -35,6 +36,7 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    [textshareBumpController configureBump:self.viewController];
     return YES;
 }
 
@@ -72,6 +74,15 @@
 
 - (NSString *) getYourThoughts{
     return [self.viewController getYourThoughts];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    if ([notification.alertAction compare:@"BUMP!"]) {
+        [self.viewController startBumping];
+    }
+    NSLog(@"message : %@", notification.alertAction);
+    [self.viewController startBumping];
+
 }
 
 @end

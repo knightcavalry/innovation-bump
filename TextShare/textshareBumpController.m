@@ -19,6 +19,7 @@
 }
 
 + (void) configureBump:(textshareViewController *)viewController{
+    NSLog(@"Configuring bump");
     [BumpClient configureWithAPIKey:@"5cedbb5f68114748a1e35686c03cecc3" andUserID:[[UIDevice currentDevice] name]];
     
     [[BumpClient sharedClient] setMatchBlock:^(BumpChannelID channel) {
@@ -33,12 +34,17 @@
     }];
     
     [[BumpClient sharedClient] setDataReceivedBlock:^(BumpChannelID channel, NSData *data) {
-        NSLog(@"Data received from %@: %@", [[BumpClient sharedClient] userIDForChannel:channel], [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
-        NSString * message = [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding];
-        [viewController setFriendMessage:message];
+        if(data != NULL){
+            NSString * message = [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding];
+            [viewController setFriendMessage:message];
+            NSLog(@"Data received from %@: %@", [[BumpClient sharedClient] userIDForChannel:channel], [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
+        }else{
+            [viewController setFriendMessage:@"Failed to retrieve the message"];
+        }
     }];
     
     [[BumpClient sharedClient] setConnectionStateChangedBlock:^(BOOL connected) {
+        [viewController setButtonStatus:connected];
         if (connected) {
             NSLog(@"Bump connected...");
         } else {

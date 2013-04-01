@@ -12,11 +12,12 @@
     IBOutlet UITextField * bumpField;
     IBOutlet UITextView * bumpedMessageBox;
     IBOutlet UIButton * bumpButton;
+    IBOutlet UIButton * bumpTimerButton;
 }
 
 - (void)setFriendMessage:(NSString *) message;
 - (NSString *)getYourThoughts;
-
+- (void)setButtonStatus:(BOOL)isactive;
 - (IBAction)easyBump:(id)sender;
-
+- (void) startBumping;
 @end
